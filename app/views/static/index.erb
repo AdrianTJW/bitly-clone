@@ -1,2 +1,12 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<form action="/urls" method="post">
+	Enter URL:
+	<input type = "text" name = "long_url">
+	<input type = "submit" value = "Submit">
+</form>
+
+<div>
+	<%=error if @error%>
+</div>
+
+
+	<p><a href="<%= @url.shorturl %>">http://localhost:9393/<%= @url.shorturl %></a></p>
