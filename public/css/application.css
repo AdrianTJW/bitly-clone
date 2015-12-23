@@ -1,0 +1,43 @@
+.header_title a {
+	color: teal;
+	font-size: 36px;
+	float: left;
+	font-family: Arial;
+	font-style: italic;
+	text-decoration: none;
+}
+
+.headerlinks a {
+	color: teal;
+	float: right;
+	padding-left: 10px;
+	padding-top: 16px;
+	font-size: 15px;
+	font-style: normal;
+	text-decoration: none;
+	font-family: Verdana;
+}
+
+.middletitle {
+	background: #99CCFF;
+	text-align: center;
+	text-decoration: none;
+}
+
+.form {
+	margin: 10px auto;
+	border: 1px teal solid;
+	padding: 10px;
+}
+
+a.link {
+	text-decoration: none;
+}
+
+a.hover {
+	color: red;
+}
+
+body {
+	background-image: url("background.jpg")
+}
