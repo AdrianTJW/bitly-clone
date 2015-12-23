@@ -1,25 +1,15 @@
 
-
-<div class="middletitle">
-
-<h1>
-	UNLEASH THE REVOLUTIONISED LINK
-</h1>
-
-<p></p>
-<h3>
-	Drive app installs and re-engagement with deep linking by Gitly.
-	<a href="/">Learn more --></a>
-</h3>
-</div>
-
 <div>
 	<%=error if @error%>
 </div>
 
-<% @url.each do |urls| %>
-	<a href="<%= urls.shorturl %>">http://localhost:9393/<%= urls.shorturl %></a><p><%= urls.clickcount %></p>
-<% end %>
-	
+<div class="results">
+	<% @url.each do |urls| %>
+		<p>
+		<a href="<%= urls.shorturl %>">http://localhost:9393/<%= urls.shorturl %></a>
+		<a>Total clicks: <%= urls.clickcount %></a>
+		</p>
+	<% end %>
+</div>
 
 
