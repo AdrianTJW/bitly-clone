@@ -1,17 +1,33 @@
-.header_title a {
+.header_title img {
 	margin-left: 300px;
+	margin-top: 50px;
 }
 
-/*.headerlinks a {
-	color: teal;
-	float: center;
-	padding-left: 10px;
-	padding-top: 16px;
+.headerlinks  {
+	color: black;
+	float: right;
 	font-size: 15px;
-	font-style: normal;
 	text-decoration: none;
 	font-family: Verdana;
-}*/
+	margin-right:20px;
+	text-align: right;
+  display: inline;
+}
+
+.active {
+    background-color: white;
+}
+
+.headerlinks a {
+  padding: 20px;
+  transition: background-color 0.5s ease;
+	border-radius: 20px;
+	margin-left: 5px;
+	border-style: groove;
+  border: 1px solid #ccc;
+  cursor: auto;
+}
+
 
 form {
 	margin: 40px auto;
@@ -20,7 +36,7 @@ form {
 }
 
 .placeholder {
-	padding:8px 15px;
+	padding:8px 30px;
   background:rgba(50, 50, 50, 0.2);
   border:0px solid #dbdbdb;
 }
@@ -32,6 +48,7 @@ form {
   border:2px solid #207cca;
   background-color:#207cca;
   color:#fafafa;
+  border-radius: 20px;
 }
 
 .form-button:hover {
@@ -48,17 +65,23 @@ body {
 	background-image: url("background2.jpg");
 }
 
-body a:hover {
-	color: yellow;
-	text-decoration: none;
-}
 
 body a:link {
 	color: darkgrey;
 	text-decoration: none;
 }
 
-body a:visited {
-	color: indigo;
+body a:hover {
+	color: blue;
 	text-decoration: none;
+}
+
+
+a:visited {
+	text-decoration: none;
+}
+
+.hlinks {
+	color: black;
+	font-family: Arial;
 }
