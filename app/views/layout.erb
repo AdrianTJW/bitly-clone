@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
+  <head>
+    <!-- 
+      normalize.css removes cross-browser differences in defaults, e.g.,
+      differences in how form elements appear between Firefox and IE
+      See: http://necolas.github.com/normalize.css/
+    -->
+    <!-- <link rel="stylesheet" href="/css/normalize.css"> -->
+    <!--
+      application.css is where you put your styles
+    -->
+    <link rel="stylesheet" href="/css/application.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery.min.js"></script>
+    <script src="/js/application.js" type='text/javascript'></script>
+    <title>Gitly</title>
+  </head>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery.min.js"></script>
-
-
-	<script src="/js/application.js" type='text/javascript'></script>
-
-  <title>Gitly</title>
-</head>
-
-<header>
-  <div class="headerlinks">
+  <header>
+    <div class="headerlinks">
       <a href="/" class="hlinks">Home</a>
       <a href="/" class="hlinks">About</a>
       <a href="/" class="hlinks">Contact</a>
       <a href="/" class="hlinks">Sign in</a>
       <a href="/" class="hlinks">Sign up</a>
-  </div>
+    </div>
 
-  <div class="header_title">
-    <a href="http://localhost:9393"><img src="/css/Drawing.png/"></a>
-  </div>
-</header>
+    <div class="header_title">
+      <a href="http://localhost:9393"><img src="/css/Drawing.png/"></a>
+    </div>
+  </header>
 
+  <body>
+    <div class="form">
+      <form action="/urls" method="post" id = "form_url">
+        <input type = "text" placeholder = "Insert URL..." name = "long_url" class="placeholder">
+        <input type = "submit" value = "Shorten" class="form-button">
+      </form>
+    </div>
 
+    <div id = "cloud"><span class='shadow'></span>
+      <div class="results">
+        <h4>Your shortened link is:
 
-<body>
-
-  <div class="form">
-    <form action="/urls" method="post">
-      <input type = "text" placeholder = "Insert URL..." name = "long_url" class="placeholder">
-      <input type = "submit" value = "Shorten" class="form-button">
-    </form>
-  </div>
-  <%= yield %>
-</body>
-
-
-
-
-
+        <p><a href="<%= @url.shorturl %>" target="_blank">http://localhost:9393/<%= @url.shorturl %></a></p>
+        <p>Total clicks: <%= @url.clickcount %></p>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
 </html>

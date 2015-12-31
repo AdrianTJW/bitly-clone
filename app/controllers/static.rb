@@ -2,7 +2,7 @@ require_relative '../models/url'
 # require 'byebug'
 
 get '/' do
-	@url = Url.all #assigning Url.all to @urls, so you dont run model in the view folder later.
+	@url = Url.last #assigning Url.all to @urls, so you dont run model in the view folder later.
   erb :"static/index"
 end
 
@@ -12,6 +12,7 @@ post '/urls' do #create a new url
 	x.clickcount = 0
 	x.save
 	redirect to '/'
+	# x.to_json
 end
 
 get '/:short_url' do #redirect to appropriate "long" URL

@@ -3,13 +3,6 @@
 	<%=error if @error%>
 </div>
 
-<div class="results">
-	<% @url.each do |urls| %>
-		<p>
-		<a href="<%= urls.shorturl %>">http://localhost:9393/<%= urls.shorturl %></a>
-		<a>Total clicks: <%= urls.clickcount %></a>
-		</p>
-	<% end %>
-</div>
+
 
 
